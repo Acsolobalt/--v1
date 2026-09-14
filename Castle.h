@@ -3,13 +3,13 @@
 #include <string>
 using namespace std;
 
-class Bishop : public Role
+class Castle : public Role
 {
 public:
-	Bishop(Position mPs) : myPos(mPs) {}
-	Bishop(Position mPs, Position vict) : myPos(mPs), DangerousFor(vict) {}
-	Bishop(Role* p);
-	virtual ~Bishop() {}
+	Castle(Position mPs) : myPos(mPs) {}
+	Castle(Position mPs, Position vict) : myPos(mPs), DangerousFor(vict) {}
+	Castle(Role* p);
+	virtual ~Castle() {}
 	virtual bool IsDangerous()const override;
 	virtual Position GetPosition()const override;
 	virtual string WhatRole()const override;
